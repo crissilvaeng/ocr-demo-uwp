@@ -1,29 +1,31 @@
-# AplicaÁ„o Demo de OCR para Universal Windows App
+# Aplica√ß√£o Demo de OCR para UWP
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](LICENSE.md)
 
-AplicaÁ„o demonstrativa da biblioteca de OCR para Windows Universal App.
+Aplica√ß√£o demonstrativa da biblioteca de OCR para Windows Universal App.
 
-O projeto em si apresenta uma itnerface pela qual È possivel carregar uma imagem, exibila na terra, processar a imagem pelo OCR, exibir o resultado na tela e salvar um documento de texto na pasta de execuÁ„o do programa.
+O projeto em si apresenta uma itnerface pela qual √© possivel carregar uma imagem, exibila na terra, processar a imagem pelo OCR, exibir o resultado na tela e salvar um documento de texto na pasta de execu√ß√£o do programa.
 
-## InstalaÁ„o
+![](https://raw.githubusercontent.com/CristinaSilvaEng/ocr-demo-uwp/master/example.gif)
 
-Visual Studio 2015 È necess·rio para executar a aplicaÁ„o.
+## Instala√ß√£o
+
+Visual Studio 2015 √© necess√°rio para executar a aplica√ß√£o.
 
 ## Uso
 
-Clicar no bot„o _Load image_, escolher uma imagem para carregar. A mesma ser· exibida no lado esquerdo da tela. Clicar no bot„o _Save text_, o texto resultado do OCR ser· apresentado no lado direito da tela e um arquivo de mesmo nome que o arquivo de imagem ser· salvo no diretorio de execuÁ„o da aplicaÁ„o.
+Clicar no bot√£o _Load image_, escolher uma imagem para carregar. A mesma ser√° exibida no lado esquerdo da tela. Clicar no bot√£o _Save text_, o texto resultado do OCR ser√° apresentado no lado direito da tela e um arquivo de mesmo nome que o arquivo de imagem ser√° salvo no diretorio de execu√ß√£o da aplica√ß√£o.
 
 ## Change log
 
-Para ver o histÛrico de mudanÁas, por favor consulte o arquivo de _[changelog](CHANGELOG.md)_ presente neste repositÛrio.
+Para ver o hist√≥rico de mudan√ßas, por favor consulte o arquivo de _[changelog](CHANGELOG.md)_ presente neste reposit√≥rio.
 
-## ContribuiÁ„o
+## Contribui√ß√£o
 
-Para contribuir com este projeto, consulte o arquivo de [dicas de contribuiÁ„o](CONTRIBUTING.md) e [cÛdigo de conduta](CONDUCT.md).
+Para contribuir com este projeto, consulte o arquivo de [dicas de contribui√ß√£o](CONTRIBUTING.md) e [c√≥digo de conduta](CONDUCT.md).
 
-## LicenÁa
+## Licen√ßa
 
-The MIT LIcense (MIT). Para consultar os detalhes desta licenÁa, consulte o [arquivo de licenÁa](LICENSE.md).
+The MIT LIcense (MIT). Para consultar os detalhes desta licen√ßa, consulte o [arquivo de licen√ßa](LICENSE.md).
 
 :octocat:
