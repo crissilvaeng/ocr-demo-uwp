@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Windows.Graphics.Imaging;
+using Windows.Media.Ocr;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 
@@ -34,6 +36,19 @@ namespace Ocr.Demo.Core
 
             // Devolve storage file para a chamada do método.
             return file;
+        }
+        /// <summary>
+        /// Recupera texto de imagem a partir de processamento OCR.
+        /// </summary>
+        /// <param name="image">Imagem na qual será executado o OCR></param>
+        /// <returns>Texto obtido a partir da imagem.</returns>
+        public async Task<string> GetTextFromImage(SoftwareBitmap image)
+        {
+            // Cria OCR engine para o idiona português do brasil.
+            OcrEngine ocr = OcrEngine.TryCreateFromLanguage(new Windows.Globalization.Language("pt-BR"));
+            OcrResult result = await ocr.RecognizeAsync(image);
+            // Retorna texto do resultado do OCR.
+            return result.Text;
         }
     }
 }

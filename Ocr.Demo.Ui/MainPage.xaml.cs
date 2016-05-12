@@ -1,5 +1,6 @@
 ﻿using Ocr.Demo.Core;
 using System;
+using Windows.Graphics.Imaging;
 using Windows.Storage;
 using Windows.Storage.Streams;
 using Windows.UI.Xaml;
@@ -14,7 +15,14 @@ namespace Ocr.Demo.Ui
     public sealed partial class MainPage : Page
     {
         // Members
+        /// <summary>
+        /// Instancia de entrada para biblioteca Core.
+        /// </summary>
         private OcrManager _manager;
+        /// <summary>
+        /// Software bitmap da imagem carregada, necessio para processar OCR.
+        /// </summary>
+        private SoftwareBitmap _softbitmap;
 
         // Constructor
         /// <summary>
@@ -39,7 +47,7 @@ namespace Ocr.Demo.Ui
             this.LoadImage();
         }
         /// <summary>
-        /// Método que recupera imagem no storage do equipamento e coloca na tela.
+        /// Recupera imagem no storage do equipamento e coloca na tela.
         /// </summary>
         private async void LoadImage()
         {
@@ -57,6 +65,11 @@ namespace Ocr.Demo.Ui
                 // Abre arquivo carregado.
                 using (IRandomAccessStream stream = await file.OpenAsync(FileAccessMode.Read))
                 {
+                    // Cria um decoder a partir do stream.
+                    BitmapDecoder decoder = await BitmapDecoder.CreateAsync(stream);
+                    // Recupera um Software Bitmap do arquivo.
+                    this._softbitmap = await decoder.GetSoftwareBitmapAsync();
+
                     // Converte para bitmap.
                     BitmapImage bitmap = new BitmapImage();
                     await bitmap.SetSourceAsync(stream);
@@ -64,6 +77,26 @@ namespace Ocr.Demo.Ui
                     this.uxImageInput.Source = bitmap;
                 }
             }
+        }
+        /// <summary>
+        /// Chama método para processar por OCR a imagem.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void uxButtonOutputFile_Click(object sender, RoutedEventArgs e)
+        {
+            this.ProcessImage();
+        }
+        /// <summary>
+        /// Processa OCR encima da imagem carregada.
+        /// </summary>
+        private async void ProcessImage()
+        {
+            // Passa software bitmap para processamento de OCR na Core.
+            string result = await this._manager.GetTextFromImage(this._softbitmap);
+            // Exibe texto recuperado na tela.
+            this.uxTextBlockOutput.Text = result;
+            // Salva arquivo .txt do arquivo.
         }
     }
 }
