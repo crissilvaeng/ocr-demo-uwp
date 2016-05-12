@@ -4,6 +4,9 @@ Todas as mudanças significativas deste projeto estão documentadas neste document
 
 Este projeto adere o [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [0.1.0] - 2016-05-12
 ### Added
-- Interface gráfica.
+- Adiciona interface gráfica básica.
+- Carrega de imagem do storage do dispositivo.
+- Processa imagem pelo OCR.
+- Salva texto resultado no sistema de arquivos do dispositivo.
