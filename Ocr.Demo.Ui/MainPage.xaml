@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="Ocr.Demo.Ui.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Ocr.Demo.Ui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="0.5*" />
+        </Grid.ColumnDefinitions>
+        <Grid Name="uxGridColumnImage" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.8*" />
+                <RowDefinition Height="0.2*" />
+            </Grid.RowDefinitions>
+            <Image Name="uxImageInput" Grid.Row="0"/>
+            <Grid Name="uxGridInputComponents" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.8*" />
+                    <ColumnDefinition Width="0.2*" />
+                </Grid.ColumnDefinitions>
+                <TextBox Name="uxTextBoxInputFile" Grid.Column="0"/>
+                <Button Name="uxButtonInputFile" Grid.Column="1"/>
+            </Grid>
+        </Grid>
+        <Grid Name="uxGridColumnText" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.8*" />
+                <RowDefinition Height="0.2*" />
+            </Grid.RowDefinitions>
+            <TextBox Name="uxTextBoxOutput" Grid.Row="0"/>
+            <Grid Name="uxGridOutputComponents" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.8*" />
+                    <ColumnDefinition Width="0.2*" />
+                </Grid.ColumnDefinitions>
+                <TextBox Name="uxTextBoxOutputFile" Grid.Column="0"/>
+                <Button Name="uxButtonOutputFile" Grid.Column="1"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

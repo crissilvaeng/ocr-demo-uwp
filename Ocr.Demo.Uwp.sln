@@ -3,7 +3,46 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocr.Demo.Ui", "Ocr.Demo.Ui\Ocr.Demo.Ui.csproj", "{EBDA0C18-006F-4178-925F-779D2C8D4AFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{3E5CF0DA-32E1-4951-A877-AB279181275A}"
+	ProjectSection(SolutionItems) = preProject
+		CHANGELOG.md = CHANGELOG.md
+		CONDUCT.md = CONDUCT.md
+		CONTRIBUTING.md = CONTRIBUTING.md
+		LICENSE.MD = LICENSE.MD
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBDA0C18-006F-4178-925F-779D2C8D4AFB}.Debug|ARM.ActiveCfg = Debug|ARM
+		{EBDA0C18-006F-4178-925F-779D2C8D4AFB}.Debug|ARM.Build.0 = Debug|ARM
+		{EBDA0C18-006F-4178-925F-779D2C8D4AFB}.Debug|ARM.Deploy.0 = Debug|ARM
+		{EBDA0C18-006F-4178-925F-779D2C8D4AFB}.Debug|x64.ActiveCfg = Debug|x64
+		{EBDA0C18-006F-4178-925F-779D2C8D4AFB}.Debug|x64.Build.0 = Debug|x64
+		{EBDA0C18-006F-4178-925F-779D2C8D4AFB}.Debug|x64.Deploy.0 = Debug|x64
+		{EBDA0C18-006F-4178-925F-779D2C8D4AFB}.Debug|x86.ActiveCfg = Debug|x86
+		{EBDA0C18-006F-4178-925F-779D2C8D4AFB}.Debug|x86.Build.0 = Debug|x86
+		{EBDA0C18-006F-4178-925F-779D2C8D4AFB}.Debug|x86.Deploy.0 = Debug|x86
+		{EBDA0C18-006F-4178-925F-779D2C8D4AFB}.Release|ARM.ActiveCfg = Release|ARM
+		{EBDA0C18-006F-4178-925F-779D2C8D4AFB}.Release|ARM.Build.0 = Release|ARM
+		{EBDA0C18-006F-4178-925F-779D2C8D4AFB}.Release|ARM.Deploy.0 = Release|ARM
+		{EBDA0C18-006F-4178-925F-779D2C8D4AFB}.Release|x64.ActiveCfg = Release|x64
+		{EBDA0C18-006F-4178-925F-779D2C8D4AFB}.Release|x64.Build.0 = Release|x64
+		{EBDA0C18-006F-4178-925F-779D2C8D4AFB}.Release|x64.Deploy.0 = Release|x64
+		{EBDA0C18-006F-4178-925F-779D2C8D4AFB}.Release|x86.ActiveCfg = Release|x86
+		{EBDA0C18-006F-4178-925F-779D2C8D4AFB}.Release|x86.Build.0 = Release|x86
+		{EBDA0C18-006F-4178-925F-779D2C8D4AFB}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
