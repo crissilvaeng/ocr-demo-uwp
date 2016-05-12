@@ -23,8 +23,8 @@
                     <ColumnDefinition Width="0.8*" />
                     <ColumnDefinition Width="0.2*" />
                 </Grid.ColumnDefinitions>
-                <TextBox Name="uxTextBoxInputFile" Grid.Column="0"/>
-                <Button Name="uxButtonInputFile" Grid.Column="1"/>
+                <TextBox Name="uxTextBoxInputFile" Grid.Column="0" IsEnabled="False"/>
+                <Button Name="uxButtonInputFile" Grid.Column="1" Content="Load image" Click="uxButtonInputFile_Click"/>
             </Grid>
         </Grid>
         <Grid Name="uxGridColumnText" Grid.Column="1">
@@ -32,14 +32,14 @@
                 <RowDefinition Height="0.8*" />
                 <RowDefinition Height="0.2*" />
             </Grid.RowDefinitions>
-            <TextBox Name="uxTextBoxOutput" Grid.Row="0"/>
+            <TextBox Name="uxTextBoxOutput" Grid.Row="0" IsEnabled="False"/>
             <Grid Name="uxGridOutputComponents" Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.8*" />
                     <ColumnDefinition Width="0.2*" />
                 </Grid.ColumnDefinitions>
-                <TextBox Name="uxTextBoxOutputFile" Grid.Column="0"/>
-                <Button Name="uxButtonOutputFile" Grid.Column="1"/>
+                <TextBox Name="uxTextBoxOutputFile" Grid.Column="0" IsEnabled="False"/>
+                <Button Name="uxButtonOutputFile" Grid.Column="1" Content="Save text"/>
             </Grid>
         </Grid>
     </Grid>
