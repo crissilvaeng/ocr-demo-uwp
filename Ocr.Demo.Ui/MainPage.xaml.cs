@@ -60,7 +60,7 @@ namespace Ocr.Demo.Ui
             else
             {
                 // Coloca nome e caminho do arquivo no textbox de input file.
-                this.uxTextBoxInputFile.Text = file.Path + file.Name;
+                this.uxTextBoxInputFile.Text = file.Path;
 
                 // Abre arquivo carregado.
                 using (IRandomAccessStream stream = await file.OpenAsync(FileAccessMode.Read))
@@ -96,7 +96,17 @@ namespace Ocr.Demo.Ui
             string result = await this._manager.GetTextFromImage(this._softbitmap);
             // Exibe texto recuperado na tela.
             this.uxTextBlockOutput.Text = result;
+
+            // Define nome do arquivo.
+            string filename = this.uxTextBoxInputFile.Text;
+            filename = filename.Substring(filename.LastIndexOf(@"\") + 1, filename.LastIndexOf(@".") - filename.LastIndexOf(@"\")) + "txt";
+            this.uxTextBoxOutputFile.Text = filename;
+
             // Salva arquivo .txt do arquivo.
+            StorageFolder folder = Windows.Storage.ApplicationData.Current.LocalFolder;
+            StorageFile file = await folder.CreateFileAsync(filename, 
+                Windows.Storage.CreationCollisionOption.ReplaceExisting);
+            await Windows.Storage.FileIO.WriteTextAsync(file, result);
         }
     }
 }
