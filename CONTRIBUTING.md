@@ -24,7 +24,8 @@ Emoji | Code | Commit Type
 :construction: | `:construction:` | em construção
 :rocket: | `:rocket:` | nova funcionalidade
 :see_no_evil: | `:see_no_evil:` | gambiarra
-:gift: | `:gift:` | nova versão
+:package: | `:gift:` | nova versão
+:lipstick: | `:lipstick:` | quando modifica a interface gráfica
 
 ### Exemplo
 ```bash
